@@ -1,0 +1,1641 @@
+
+/* ==========================================
+   IMPORTAÇÃO DE FONTE LOCAL (MEDIEVAL)
+   ========================================== */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Black Chancery';
+    src: url('assets/BLKCHCRY.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Military';
+    src: url('assets/Dolen.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ==========================================
+   NAVEGAÇÃO (DESKTOP E GERAL)
+   ========================================== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center; /* Centraliza no computador */
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0 20px;
+}
+
+/* Estilo Base dos Links */
+nav a, .nav-link {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de Destaque Sutil (Scrollspy) que conversamos */
+.nav-link.active {
+    color: #4b0082 !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4b0082;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* ==========================================
+   CONFIGURAÇÃO MOBILE (O QUE MUDA NO CELULAR)
+   ========================================== */
+@media (max-width: 768px) {
+    nav {
+        height: 60px; /* Um pouco mais baixo no celular */
+        justify-content: space-around; /* Espalha os itens para usar a largura toda */
+        padding: 0 5px;
+    }
+
+    nav a, .nav-link {
+        margin: 0 5px;     /* Reduz o espaço entre palavras */
+        font-size: 0.7rem; /* Fonte menor para caber tudo lado a lado */
+        flex: 1;           /* Força cada item a ter o mesmo tamanho */
+        text-align: center;
+    }
+    
+    /* Títulos que extrapolam no Mobile */
+    .nome-destaque { font-size: 3rem !important; }
+    .titulo-contato-gigante { font-size: 3.5rem !important; }
+    .titulo-medieval, .titulo-missoes { font-size: 3.2rem !important; }
+}
+
+
+/* Layout em Duas Colunas (Para a Bio) */
+.conteudo-flex {
+    display: flex;
+    max-width: 1000px;
+    align-items: center;
+    gap: 50px; /* Espaço entre texto e imagem */
+}
+
+.coluna-texto { flex: 1; text-align: left; }
+.coluna-imagem { flex: 1; }
+
+.foto-placeholder {
+    width: 100%;
+    height: 400px;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+
+:root {
+    --bege-papel: #f5f1e9;
+    --verde-suave: #e2e8e0;
+}
+
+/* Quadrante 1 - Recepção Visual */
+.intro { 
+    background-color: var(--verde-suave) !important; 
+}
+
+/* Quadrante 2 - Conteúdo e Biografia */
+.detalhes { 
+    background-color: var(--bege-papel) !important;
+    padding-top: 80px; /* Espaço para o título respirar */
+}
+
+/* Estilo para o título "Sobre Mim" */
+.titulo-sobre {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #4b0082;
+    margin-bottom: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+#lancamento { background-color: #ffffff; }
+
+
+
+
+/* Paleta de Cores */
+:root {
+    --verde-claro: #d4e1d1;
+    --cinza-elegante: #4a4a4a;
+    --cinza-claro: #f4f4f4;
+}
+
+
+.intro {
+    background-color: var(--verde-suave) !important;
+    padding: 100px 0;
+}
+
+.linha-topo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #555; /* Cinza suave para o "Olá" */
+    margin-bottom: 10px;
+    display: block;
+}
+
+.nome-destaque {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 5.5rem; /* Impacto gigante */
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin: 10px 0;
+    
+    /* COR HARMÔNICA: Um violeta bem profundo/escuro 
+       que contrasta perfeitamente com o verde sálvia */
+    color: #220637; 
+
+    letter-spacing: -3px;
+}
+
+.linha-base {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    color: #372048; /* O seu roxo padrão para amarrar o design */
+    opacity: 0.8;
+}
+
+
+
+
+
+/* ==========================================
+   NOVA SEÇÃO SOBRE MIM (BIO)
+   ========================================== */
+
+.bio-container {
+    display: flex;
+    align-items: flex-start; /* Alinha o topo da foto com o topo do texto */
+    justify-content: center;
+    max-width: 1000px;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.bio-imagem {
+    flex: 0 0 350px; /* Largura fixa para a foto */
+}
+
+.foto-perfil-bio {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Arredondado conforme seu estilo */
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #4b0082;
+}
+
+.bio-texto {
+    flex: 1;
+    text-align: left;
+}
+
+/* Reutilizando sua fonte elegante para a biografia */
+.bio-texto .texto-serifado {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Ajuste para telas pequenas (celular) */
+@media (max-width: 768px) {
+    .bio-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .bio-texto {
+        text-align: center;
+    }
+}
+
+
+/* ==========================================
+   CONFIGURAÇÃO DOS TRÊS ANDARES (INTRO)
+   ========================================== */
+
+/* Cores e Variáveis */
+:root {
+    --verde-claro: #d4e1d1;     /* Verde claro sugerido */
+    --cinza-elegante: #4a4a4a;  /* Cinza para o texto */
+}
+
+/* Fundo da seção intro */
+.intro { 
+    background-color: var(--verde-claro); 
+}
+
+.frase-impacto {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Empilha os andares */
+    justify-content: center;
+    text-align: left;
+    color: var(--cinza-elegante);
+}
+
+/* Estilo para o 1º e 3º andar (Moderno e Quadrado) */
+.linha-topo, .linha-base {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    display: block; /* Garante que ocupe a linha toda */
+}
+
+/* Estilo para o 2º andar (Serifado, Elegante e Grande) */
+.nome-destaque {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.2rem; /* Tamanho maior de destaque */
+    line-height: 1.1;
+    margin: 5px 0;    /* Espaçamento entre os andares */
+    font-style: italic;
+    font-weight: 700;
+    display: block;   /* Garante que não haja quebra lateral */
+    white-space: nowrap; /* Impede o nome de cair para a linha de baixo */
+}
+
+
+
+/* ==========================================
+   TIPOGRAFIA FLEXÍVEL (SISTEMA DE VOZES)
+   ========================================== */
+
+.fonte-medieval {
+    font-family: 'Black Chancery', 'Uncial Antiqua', cursive;
+    color: #4b0082;
+    text-align: center;
+}
+
+/* Estilo Serifado (Agora usado no Subtítulo) */
+.titulo-obra-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic; /* Adicionei o itálico para dar charme ao subtítulo */
+    color: #4b0082;
+    opacity: 0.8;
+    text-align: center;
+}
+/* Estilo Moderno/Futurista (Para novos projetos) */
+.fonte-moderna {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+/* ==========================================
+   IMAGEM DE FUNDO.
+   ========================================== */
+
+
+
+/* Classe para qualquer seção que queira fundo com foto */
+.fundo-ambientado {
+    position: relative;
+    overflow: hidden;
+    background: none !important; /* Remove o cinza/branco original */
+}
+
+/* O "fantasma" da imagem que fica atrás de tudo */
+.fundo-ambientado::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    /* Substitua pelo caminho da sua imagem medieval */
+    background-image: var(--img-fundo); 
+    background-size: cover;
+    background-position: center;
+    
+    /* O SEGREDO: Desfoque e Escurecimento */
+    filter: blur(15px) brightness(0.4); 
+    transform: scale(1.1); /* Aumenta um pouco para o desfoque não criar bordas brancas */
+    z-index: 0;
+}
+
+/* Garante que o conteúdo fique na frente da imagem */
+.fundo-ambientado > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ==========================================
+   FUNDOS AMBIENTADOS (PLANO DE FUNDO TOTAL)
+   ========================================== */
+
+
+
+
+
+
+
+
+/* Opcional: Ajuste o container de lançamento para destacar sobre o bege */
+.container-lancamento {
+    background-color: #ffffff; /* Branco puro para dar um "salto" sobre o bege */
+    border: 1px solid rgba(75, 0, 130, 0.1); /* Borda violeta quase invisível */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05); /* Sombra mais leve e elegante */
+}
+
+
+
+
+
+
+
+
+.livro-secao{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que o fundo não saia da seção */
+}
+
+
+/* --- SEÇÃO DE LIVROS (MANTÉM O FUNDO COM IMAGEM) --- */
+.livro-secao {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.livro-secao::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: var(--img-fundo);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    filter: blur(15px) brightness(0.8);
+    z-index: 0;
+    transform: scale(1.1);
+}
+
+/* --- SEÇÃO DE LANÇAMENTO (COR SÓLIDA, SEM IMAGEM) --- */
+.lancamento-secao {
+    background-color: var(--bege-papel) !important;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    z-index: 1;
+}
+
+/* Garante que nenhum "fantasma" de imagem apareça no lançamento */
+.lancamento-secao::before {
+    display: none !important;
+}
+
+
+/* Suavizando a aparição das sinopses */
+.conteudo-extra {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 20px 0;
+}
+
+/* Classe auxiliar que o JS vai usar para animar */
+.conteudo-extra.visivel {
+    display: block;
+    opacity: 1;
+}
+
+.corpo-template {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Garante centralização horizontal */
+    align-items: center;
+    margin: 30px 0;
+}
+
+.imagem-template-obra {
+    width: 60% !important; /* Força os 60% de largura */
+    max-width: 320px;     /* Teto para não estourar em telas gigantes */
+    height: auto;
+    display: block;
+    margin: 0 auto !important; /* Força a centralização */
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.15));
+    position: relative;
+    z-index: 5;
+}
+
+/* ==========================================
+   CONTAINERS SÓLIDOS (OS RETÂNGULOS EM PÉ)
+   ========================================== */
+
+/* O container central recupera a cor sólida e fica na frente */
+/* O container central continua com sua cor sólida */
+.conteudo-livro-v3, .container-lancamento {
+    position: relative;
+    z-index: 2;
+    background-color: #f9f9f9;
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto; /* Margem para respirar entre livros */
+}
+
+
+/* ==========================================
+   AJUSTES INTERNOS LANÇAMENTO (RESTAURADOS)
+   ========================================== */
+
+.topo-lancamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    border-bottom: 2px solid #4b0082;
+    padding-bottom: 15px;
+}
+
+.chamada-lancamento span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #4b0082;
+}
+
+.data-lancamento .data {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #d4af37;
+}
+
+.corpo-lancamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 40px 0;
+}
+
+.frase-linha-1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #4b0082;
+    transform: skewX(-10deg);
+}
+
+.frase-linha-2 {
+    font-family: 'Inter', sans-serif;
+    background: #4b0082;
+    color: white;
+    padding: 5px 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.capa-lancamento {
+    width: 280px;
+    height: auto;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+}
+
+
+
+
+/* ==========================================
+   BOTÕES FULL-WIDTH
+   ========================================== */
+
+
+.caixa-interacao {
+    width: 100%; /* Garante que os botões ocupem a largura do container */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaço entre os botões empilhados */
+}
+
+.btn-largo {
+    width: 100%; /* Botão da largura total do container */
+    background: white;
+    border: 1px solid #4b0082;
+    padding: 20px 30px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-largo:hover {
+    background: #fdfdf5;
+    transform: translateX(5px); /* Pequeno deslocamento lateral no hover */
+    box-shadow: -5px 0px 0px #4b0082; /* Sombra sólida à esquerda */
+}
+
+.placeholder-embed {
+    width: 100%;
+    height: 300px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ccc;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+/* ==========================================
+   BOTÕES DOURADOS LARGOS E EMPILHADOS
+   ========================================== */
+
+/* Container para empilhar os botões de compra */
+.caixa-compra-vertical {
+    display: flex;
+    flex-direction: column; /* Empilha um sobre o outro */
+    gap: 12px;              /* Espaço entre os botões */
+    width: 100%;            /* Largura total da caixa pai */
+    margin-top: 20px;
+}
+
+.btn-dourado-largo {
+    display: block;         /* Ocupa a linha toda */
+    width: 100%;            /* Mesma largura dos botões de sinopse */
+    background: linear-gradient(145deg, #d4af37, #f1d592);
+    color: #310055;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 20px;          /* Padding generoso para ficar alto como os outros */
+    border-radius: 50px;    /* Extremidades arredondadas (estilo pílula) */
+    border: 1px solid #b8860b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+}
+
+.btn-dourado-largo:hover {
+    transform: scale(1.02); /* Leve aumento no tamanho ao passar o rato */
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
+    background: linear-gradient(145deg, #f1d592, #d4af37);
+}
+
+
+
+
+
+
+
+/* ==========================================
+   CONTATO - VERSÃO FINAL CORRIGIDA
+   ========================================== */
+
+/* SEÇÃO CONTATO - Agora em Verde Sálvia */
+.contato-secao {
+    background-color: var(--verde-suave) !important; /* Alternância */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0; /* Aumentei um pouco o respiro */
+}
+
+
+
+
+.container-contato {
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.contato-esquerda {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chamada em Preto */
+.chamada-contato {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #000000;          /* PRETO PURO */
+    margin-bottom: -15px;    /* Mantém a sobreposição artística */
+    margin-left: 5px;
+    z-index: 2;
+    position: relative;
+    background: transparent !important;
+    display: inline-block;
+}
+
+/* Título Contato Preenchido em Violeta */
+.titulo-contato-gigante {
+    font-family: 'Inter', sans-serif;
+    font-size: 7.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    color: #4b0082;          /* VIOLETA PREENCHIDO */
+    -webkit-text-stroke: 0;  /* REMOVE O CONTORNO */
+    white-space: nowrap;
+    letter-spacing: -2px;    /* Ajuste para as letras ficarem mais juntas e impactantes */
+}
+
+/* LADO DIREITO - REDES SOCIAIS (CORRIGIDO) */
+.contato-direita {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 40px;
+    border-left: 1px solid rgba(75, 0, 130, 0.1);
+}
+
+.rede-social-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icone-rede {
+    font-size: 1.5rem; /* Faz o emoji aparecer */
+}
+
+.info-rede {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-rede {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.user-rede {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #4b0082;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .container-contato {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contato-direita {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+    .titulo-contato-gigante { font-size: 5rem; }
+}
+
+/* RODAPÉ */
+.rodape {
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--bege-papel) !important; /* Alternância final */
+    text-align: center;
+}
+
+/* Ajuste na linha divisória do rodapé para combinar com o Bege */
+.rodape::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #4b0082; 
+    margin: 0 auto 15px auto;
+    opacity: 0.2;
+}
+
+.rodape p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #777; /* Um pouco mais escuro para ler melhor no bege */
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************* Botando código novo aqui começa correções mobile */
+
+
+@media (max-width: 768px) {
+    .quadrante {
+        width: 100vw;        /* Força a largura exata da janela visual */
+        padding: 80px 15px;  /* Reduz um pouco o respiro lateral */
+        overflow: hidden;    /* Garante que nada saia do quadrante */
+    }
+
+    /* O grande vilão: Títulos que não quebram */
+    .nome-destaque, 
+    .titulo-contato-gigante, 
+    .titulo-medieval, 
+    .titulo-missoes {
+        max-width: 100%;     /* Impede que o título seja maior que a tela */
+        word-wrap: break-word; /* Força a quebra de palavra se necessário */
+        font-size: 2.8rem !important; /* Ajuste emergencial de tamanho */
+        text-align: center;
+    }
+
+    /* Se houver algum container de largura fixa, mude para 100% */
+    .conteudo-livro-v3, 
+    .caixa-interacao, 
+    .container-lancamento {
+        width: 100% !important;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 608px) {
+    
+    /* 1. IMPEDIR VAZAMENTO LATERAL (ESPAÇO EM BRANCO) */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+
+
+    /* 2. EFEITO DE CARTÃO FLUTUANTE NA SEÇÃO DE LIVROS */
+    /* Isso faz com que a foto desfocada apareça nas bordas (5% de cada lado) */
+    .conteudo-livro-v3 {
+        /* Força a largura a ser a tela inteira MENOS 40px (20px de cada lado) */
+        width: calc(100vw - 40px) !important; 
+        
+        max-width: 350px;          /* Diminuí o limite para ele parecer mais um 'card' */
+        background-color: #ffffff; 
+        margin: 0 auto !important; /* Força centralização horizontal */
+        padding: 30px 20px;        
+        border-radius: 20px;       
+        box-shadow: 0 15px 40px rgba(0,0,0,0.4); 
+        
+        display: block;            /* Garante que se comporte como bloco */
+        position: relative;
+        left: 0;
+        right: 0;
+    }
+
+    /* Garante que a seção pai não tenha nada empurrando o cartão */
+    .quadrante.livro-secao {
+        padding: 40px 0 !important; /* Respiro apenas no topo/base */
+        width: 100vw !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 3. REDUÇÃO DOS TÍTULOS GIGANTES PARA CABER NO CARTÃO */
+    .nome-destaque, 
+    .titulo-contato-gigante, 
+    .titulo-medieval, 
+    .titulo-missoes,
+    .fonte-medieval {
+        font-size: 2.5rem !important; /* Tamanho ajustado para mobile */
+        max-width: 100%;
+        word-wrap: break-word;
+        text-align: center;
+        line-height: 1.1;
+        margin-bottom: 15px !important;
+    }
+
+    /* 4. AJUSTE DAS IMAGENS DAS CAPAS */
+    .imagem-template-obra {
+        width: 100% !important;
+        max-width: 180px; /* Capa menor para caber no cartão mobile */
+        height: auto;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    /* 5. AJUSTE DE BOTÕES E INTERAÇÃO */
+    .caixa-interacao {
+        width: 100% !important;
+    }
+
+    .btn-largo, .btn-dourado-largo {
+        width: 100% !important;
+        padding: 14px 10px !important;
+        font-size: 0.85rem !important;
+        margin-bottom: 10px !important;
+        display: block;
+    }
+
+ 
+
+    /* 7. MENU LADO A LADO (SEM EMPILHAR) */
+    nav {
+        height: 60px;
+        justify-content: space-around;
+        padding: 0 5px;
+    }
+
+    nav a, .nav-link {
+        margin: 0 5px;
+        font-size: 0.65rem; /* Fonte pequena para caber todos os itens */
+        flex: 1;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   1. VARIÁVEIS, RESET E ESTRUTURA GLOBAL
+   ============================================================ */
+:root {
+    --bege-papel: #f5f1e9;
+    --verde-suave: #d4e1d1;
+    --violeta-profundo: #220637;
+    --violeta-vibrante: #4b0082;
+    --dourado: #d4af37;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bege-papel);
+}
+
+/* ============================================================
+   2. FONTES E TIPOGRAFIA (VOZES)
+   ============================================================ */
+@font-face {
+    font-family: 'Black Chancery';
+    src: url('assets/BLKCHCRY.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Military';
+    src: url('assets/Dolen.ttf') format('truetype');
+}
+
+.titulo-medieval, .fonte-medieval { font-family: 'Black Chancery', serif; color: var(--violeta-vibrante); }
+.titulo-missoes { font-family: 'Military', sans-serif; color: var(--violeta-vibrante); }
+.texto-serifado, .titulo-obra-serif { font-family: 'Playfair Display', serif; }
+
+/* ============================================================
+   3. NAVEGAÇÃO FIXA
+   ============================================================ */
+nav {
+    position: fixed;
+    top: 0; width: 100%; height: 70px;
+    background: #fff;
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    text-decoration: none; color: #333; margin: 0 15px;
+    font-weight: 600; text-transform: uppercase; font-size: 0.9rem;
+    position: relative; transition: 0.3s;
+}
+
+.nav-link.active { color: var(--violeta-vibrante) !important; }
+.nav-link.active::after {
+    content: ""; position: absolute; bottom: -5px; left: 0;
+    width: 100%; height: 2px; background: var(--violeta-vibrante);
+}
+
+/* ============================================================
+   4. LAYOUT DE SEÇÕES (DESKTOP)
+   ============================================================ */
+.quadrante {
+    width: 100%; min-height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    position: relative; padding: 100px 20px;
+}
+
+.intro { background-color: var(--verde-suave) !important; }
+
+
+
+/* Cartão dos Livros */
+.conteudo-livro-v3, .container-lancamento {
+    position: relative; z-index: 2;
+    background-color: #f9f9f9;
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width: 90%; max-width: 850px;
+}
+
+/* Fundo Ambientado */
+.livro-secao::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: var(--img-fundo); background-size: cover; background-position: center;
+    background-attachment: fixed; filter: blur(15px) brightness(0.8);
+    z-index: 0; transform: scale(1.1);
+}
+
+/* ============================================================
+   5. COMPONENTES (BOTÕES E INTERAÇÃO)
+   ============================================================ */
+.btn-largo {
+    width: 100%; background: white; border: 1px solid var(--violeta-vibrante);
+    padding: 20px; font-weight: bold; text-transform: uppercase;
+    display: flex; justify-content: space-between; cursor: pointer; transition: 0.3s;
+}
+
+.btn-largo:hover { transform: translateX(5px); box-shadow: -5px 0px 0px var(--violeta-vibrante); }
+
+.btn-dourado-largo {
+    display: block; width: 100%; text-align: center;
+    background: linear-gradient(145deg, #d4af37, #f1d592);
+    padding: 20px; border-radius: 50px; font-weight: 700;
+    text-decoration: none; color: #310055; margin-top: 10px;
+}
+
+.conteudo-extra { display: none; opacity: 0; transition: 0.4s; }
+.conteudo-extra.visivel { display: block; opacity: 1; }
+
+/* ============================================================
+   6. CONTATO E RODAPÉ
+   ============================================================ */
+.contato-secao { background-color: var(--verde-suave) !important; }
+.titulo-contato-gigante { font-size: 7.5rem; font-weight: 900; color: var(--violeta-vibrante); text-transform: uppercase; }
+
+.rodape { padding: 40px 0; text-align: center; background: var(--bege-papel); }
+.rodape::before { content: ""; display: block; width: 50px; height: 1px; background: var(--violeta-vibrante); margin: 0 auto 15px; opacity: 0.2; }
+
+/* ============================================================
+   7. REGRAS DE OURO PARA MOBILE (CORREÇÃO FINAL)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Menu */
+    nav { height: 60px; justify-content: space-around; padding: 0 5px; }
+    .nav-link { font-size: 0.65rem; margin: 0 3px; flex: 1; text-align: center; }
+
+    /* O CARTÃO MOBILE (O respiro lateral que você pediu) */
+    .conteudo-livro-v3, .container-lancamento, .container-contato {
+        width: calc(100vw - 40px) !important; /* Sobra 20px de cada lado */
+        padding: 30px 15px !important;
+        margin: 20px auto !important;
+        max-width: 350px;
+    }
+
+    /* Títulos que "vazavam" */
+    .titulo-contato-gigante, .titulo-medieval, .titulo-missoes {
+        font-size: 2.2rem !important;
+        white-space: normal !important;
+        text-align: center;
+    }
+
+    /* Bio e Contato empilhados */
+    .bio-container, .container-contato, .corpo-lancamento, .topo-lancamento {
+        flex-direction: column; align-items: center; text-align: center;
+    }
+
+    .contato-direita { border-left: none; padding-left: 0; margin-top: 30px; }
+    .user-rede { font-size: 1.4rem; }
+
+    /* Performance fundo */
+    .livro-secao::before { background-attachment: scroll; }
+}
+
+
+
+/* --- AJUSTE GERAL (DESKTOP) --- */
+.chamada-contato {
+    display: block;
+    margin-bottom: 10px; /* Criamos o espaço aqui */
+    margin-left: 5px;
+    z-index: 2;
+    position: relative;
+}
+
+.titulo-contato-gigante {
+    line-height: 1.1; /* Aumentamos levemente para as letras não encostarem no topo */
+    margin-top: 0;
+}
+
+/* --- AJUSTE ESPECÍFICO (MOBILE) --- */
+@media (max-width: 768px) {
+    .chamada-contato {
+        margin-bottom: 15px !important; /* Respiro extra no celular */
+        text-align: center;
+        width: 100%;
+    }
+
+    .titulo-contato-gigante {
+        margin-top: 5px !important;
+        line-height: 1.2 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Garante que o container pai alinhe tudo à esquerda */
+    .frase-impacto {
+        align-items: flex-start !important; /* Alinha os itens no início (esquerda) */
+        text-align: left !important;        /* Alinha o texto internamente */
+        padding-left: 20px;                 /* Dá um respiro da borda do celular */
+    }
+
+    .nome-destaque {
+        font-size: 2.5rem !important;      /* Ajuste de tamanho para o nome */
+        text-align: left !important;       /* Força a esquerda */
+        white-space: normal !important;    /* Permite quebra se o nome for longo */
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .linha-topo, .linha-base {
+        text-align: left !important;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* 1. Container Pai: Empilha a foto em cima e o conjunto de texto embaixo */
+    .bio-container {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    /* 2. Foto centralizada no topo */
+    .bio-imagem {
+        width: 100%;
+        max-width: 280px; /* Tamanho da foto no celular */
+        flex: none;
+        margin-bottom: 10px;
+    }
+
+    /* 3. NOVO CONTAINER: Criamos uma linha para o Título Vertical + Texto */
+    /* Nota: No seu HTML, envolva o título e o texto em uma div se necessário, 
+       ou use este seletor se eles já forem irmãos diretos */
+    .bio-texto-wrapper { 
+        display: flex;
+        flex-direction: row; /* Coloca lado a lado */
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* 4. Título "Sobre Mim" Verticalizado */
+    .titulo-sobre {
+        writing-mode: vertical-rl; /* Gira o texto */
+        text-orientation: upright;  /* Mantém as letras em pé, uma sob a outra */
+        text-transform: uppercase;
+        font-family: 'Inter', sans-serif; /* Ou sua fonte de destaque */
+        font-weight: 900;
+        font-size: 1.2rem !important;
+        letter-spacing: 2px;
+        color: var(--violeta-vibrante);
+        border-right: 2px solid var(--violeta-vibrante);
+        padding-right: 8px;
+        margin: 0 !important;
+        white-space: nowrap;
+    }
+
+    /* 5. Ajuste do Texto da Bio */
+    .bio-texto {
+        flex: 1;
+        text-align: left !important;
+    }
+
+    .bio-texto .texto-serifado {
+        font-size: 1.1rem !important;
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+
+
+/* ============================================================
+   1. VARIÁVEIS E ESTRUTURA GLOBAL
+   ============================================================ */
+:root {
+    --bege-papel: #f5f1e9;
+    --verde-suave: #d4e1d1;
+    --violeta-vibrante: #4b0082;
+    --violeta-profundo: #220637;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bege-papel);
+}
+
+/* ============================================================
+   2. QUADRANTES E INTRO (ALINHADA À ESQUERDA NO MOBILE)
+   ============================================================ */
+.quadrante {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 80px 20px;
+}
+
+.intro { background-color: var(--verde-suave) !important; }
+
+/* Desktop: Bio Lado a Lado */
+.bio-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+}
+
+.bio-texto-wrapper {
+    display: flex;
+    align-items: center; /* Centraliza o título vertical em relação ao texto */
+    gap: 20px;
+}
+
+/* Espaço entre parágrafos da Bio */
+.bio-texto p {
+    margin-bottom: 15px;
+}
+.bio-texto p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   3. SEÇÃO DE LIVROS (CARTÃO FLUTUANTE)
+   ============================================================ */
+.livro-secao::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: var(--img-fundo); background-size: cover; background-position: center;
+    background-attachment: fixed; filter: blur(15px) brightness(0.8);
+    z-index: 0; transform: scale(1.1);
+}
+
+.conteudo-livro-v3 {
+    position: relative; z-index: 2;
+    background-color: #ffffff;
+    padding: 50px; border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width: 90%; max-width: 850px;
+    margin: 40px auto;
+}
+
+/* ============================================================
+   4. CONTATO E BOTÕES
+   ============================================================ */
+.contato-secao { background-color: var(--verde-suave) !important; }
+
+.titulo-contato-gigante {
+    font-size: 7.5rem; font-weight: 900; color: var(--violeta-vibrante);
+    line-height: 1; text-transform: uppercase;
+}
+
+.btn-dourado-largo {
+    display: block; width: 100%; text-align: center;
+    background: linear-gradient(145deg, #d4af37, #f1d592);
+    padding: 20px; border-radius: 50px; font-weight: 700;
+    text-decoration: none; color: #310055; margin-top: 10px;
+}
+
+/* ============================================================
+   5. AJUSTES MOBILE (A GRANDE MUDANÇA)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Intro à Esquerda */
+    .frase-impacto {
+        align-items: flex-start !important;
+        text-align: left !important;
+        padding-left: 10px;
+    }
+    .nome-destaque { 
+        font-size: 3rem !important; 
+        text-align: left !important;
+        white-space: normal !important;
+    }
+
+    /* Bio: Foto em cima, Título Vertical + Texto embaixo */
+    .bio-container {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 30px;
+    }
+    .bio-imagem { width: 100%; max-width: 280px; }
+    
+    .bio-texto-wrapper {
+        display: flex !important;
+        flex-direction: row !important; /* Título e texto lado a lado */
+        align-items: center !important;  /* Centraliza o título vertical na altura do bloco de texto */
+        width: 100%;
+        gap: 15px;
+    }
+
+    .titulo-sobre {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 1.1rem !important;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--violeta-vibrante);
+        border-right: 2px solid var(--violeta-vibrante);
+        padding-right: 8px;
+        margin: 0 !important;
+        white-space: nowrap;
+    }
+
+    /* O Cartão dos Livros com respiro lateral */
+    .conteudo-livro-v3 {
+        width: calc(100vw - 40px) !important;
+        padding: 30px 20px !important;
+        max-width: 350px;
+    }
+
+    /* Contato Ajustado */
+    .titulo-contato-gigante {
+        font-size: 4.2rem !important;
+        text-align: center;
+        white-space: normal !important;
+    }
+    .chamada-contato { margin-bottom: 15px !important; text-align: center; }
+
+    /* Performance fundo */
+    .livro-secao::before { background-attachment: scroll; }
+}
+
+
+.foto-perfil-main {
+    width: 100%;
+    max-width: 400px; /* Ajuste o tamanho que desejar para o desktop */
+    height: auto;
+    border-radius: 15px; /* Para manter o estilo arredondado que você gosta */
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.1); /* Sombra elegante */
+    display: block;
+}
+
+/* No mobile, para ela não sumir ou quebrar o layout */
+@media (max-width: 768px) {
+    .conteudo-flex {
+        flex-direction: column-reverse; /* Coloca a foto embaixo do texto ou vice-versa */
+        text-align: left;
+    }
+    
+    .foto-perfil-main {
+        max-width: 280px;
+        margin: 30px 0; /* Espaço entre o texto e a foto */
+    }
+}
+
+
+
+
+
+
+/* CONTAINER DA GALERIA */
+.container-galeria {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.galeria-fita-wrapper {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    /* Efeito de degradê nas pontas para suavizar a entrada/saída */
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.fita-marquee {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 25px;
+    user-select: none;
+}
+
+.fita-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll-fita 40s linear infinite;
+}
+
+.fita-track img {
+    height: 280px; /* Altura no Desktop */
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.fita-track img:hover {
+    transform: scale(1.05);
+}
+
+/* Direção Reversa */
+.fita-reversa .fita-track {
+    animation-direction: reverse;
+}
+
+/* ANIMAÇÃO */
+@keyframes scroll-fita {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* AJUSTE MOBILE */
+@media (max-width: 768px) {
+    .fita-track img {
+        height: 180px; /* Menor no celular para caber melhor */
+    }
+    .fita-marquee {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Container do Cupom abaixo do Trailer */
+.cupom-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 10px; /* Reduzi o padding lateral */
+    background: #fdfdf5;
+    border-radius: 10px;
+    width: 100%; /* Garante que não passe da div pai */
+    box-sizing: border-box;
+}
+
+.texto-cupom-chamada {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #4b0082;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* O Ticket Ajustado */
+.cupom-ticket {
+    display: flex; /* Mudado de inline-flex para flex */
+    flex-wrap: wrap; /* Permite quebrar linha se não couber */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px dashed #d4af37;
+    padding: 15px;
+    background: white;
+    max-width: 100%; /* Crucial para não vazar */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.codigo-cupom {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem; /* Diminuído levemente para mobile */
+    color: #310055;
+    letter-spacing: 1px;
+    word-break: break-all; /* Garante que o texto não "fure" a borda */
+}
+
+.detalhe-cupom {
+    background: #d4af37;
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.link-copiar {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #4b0082;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/* Ajuste específico para telas muito pequenas */
+@media (max-width: 400px) {
+    .cupom-ticket {
+        flex-direction: column; /* Empilha o código e a porcentagem */
+        gap: 5px;
+    }
+    .codigo-cupom {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+/* 1. Centraliza a coluna da direita (onde ficam as redes) */
+    .contato-direita {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os blocos de rede social */
+        text-align: center;
+        padding-left: 0;
+        border-left: none;
+        width: 100%;
+    }
+
+    /* 2. Mantém o Ícone e o Texto lado a lado, mas centralizados */
+    .rede-social-item {
+        display: flex;
+        align-items: center; /* Alinha o ícone verticalmente ao centro do texto */
+        justify-content: flex-start; /* Mantém o ícone grudado no texto */
+        gap: 15px;
+        width: fit-content; /* Ocupa apenas o espaço necessário para centralizar o conjunto */
+        margin-bottom: 25px;
+        text-align: left; /* Garante que o texto interno (Label e User) não quebre a harmonia */
+    }
+
+    /* 3. Ajuste opcional para o e-mail longo */
+    .user-rede.email-ajuste {
+        font-size: 1rem !important; /* Segurança para não vazar no centro */
+    }
+}
+
+
+.titulo-feedbacks-clean {
+    font-family: 'Inter', sans-serif !important; /* Força a saída da fonte medieval */
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--violeta-vibrante);
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+/* Ajuste Mobile para não quebrar a tela */
+@media (max-width: 768px) {
+    .titulo-feedbacks-clean {
+        font-size: 2.2rem !important;
+        letter-spacing: 0;
+        margin-bottom: 30px;
+    }
+}
