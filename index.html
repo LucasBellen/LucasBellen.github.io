@@ -1,488 +1,382 @@
-
-
 <!DOCTYPE html>
-<html lang="pt-br">
-    
+<html lang="pt-BR">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC:wght@700&family=MedievalSharp&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Bellen | Landing Page</title>
-    
+    <meta name="description" content="Landing page oficial de Lucas Bellen, escritor e autor de romances e crônicas.">
+    <meta name="theme-color" content="#f5f1e9">
+    <title>Lucas Bellen | Escritor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav>
-        <div class="nav-container">
-            <a href="#sobre-mim">Sobre Mim</a>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navegação principal">
+            <a href="#sobre-mim">Sobre mim</a>
             <a href="#livros">Livros</a>
             <a href="#lancamento">Lançamento</a>
             <a href="#galeria">Galeria</a>
             <a href="#contato">Contato</a>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
+    <main>
+        <section id="sobre-mim" class="section hero">
+            <div class="section-inner hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Olá,</p>
+                    <h1>Sou Lucas Bellen</h1>
+                    <p class="hero-subtitle">Escritor e amante de arte.</p>
+                </div>
 
-<section id="sobre-mim" class="quadrante intro">
-    <div class="conteudo-flex">
-        <div class="frase-impacto">
-            <span class="linha-topo">Olá,</span>
-            <h1 class="nome-destaque">Sou Lucas Bellen</h1>
-            <span class="linha-base">Escritor e amante de arte.</span>
-        </div>
-        
-        <div class="coluna-imagem">
-            <img src="assets/eu1.png" alt="Lucas Bellen" class="foto-perfil-main">
-        </div>
-    </div>
-</section>
-
-
-
-<section class="quadrante detalhes">
-    <div class="bio-container">
-        
-        <div class="bio-imagem">
-            <img src="assets/eu2.jpeg" alt="Lucas Bellen" class="foto-perfil-bio">
-        </div>
-
-        <div class="bio-texto-wrapper">
-            
-            <h2 class="titulo-sobre">Sobre Mim</h2>
-            
-            <div class="bio-texto">
-                <p class="texto-serifado">
-                    Comecei a ler desde pequeno, aos cinco anos de idade, com as revistas em quadrinho que ganhava do Tio Patinhas e da Turma da Mônica. 
-                </p>
-                <p class="texto-serifado">
-                    Minha missão de vida é impactar a vida das pessoas com histórias, misturando o simples ao extraordinário. 
-                </p>
-                <p class="texto-serifado">
-                    Muito além de páginas, meus livros são o legado que quero deixar para o futuro. Acredito no poder de cada um de nós em fazer a sua parte por um mundo melhor.  
-                </p>
+                <figure class="hero-media">
+                    <img src="assets/eu1.png" alt="Lucas Bellen" class="hero-image" loading="eager" decoding="async">
+                </figure>
             </div>
-            
-        </div> </div>
-</section>
+        </section>
 
-<section id="livros" class="quadrante livro-secao" style="--img-fundo: url('assets/provacaodesfoque.jpg');">
-    <div class="conteudo-livro-v3">
+        <section class="section bio">
+            <div class="section-inner bio-grid">
+                <figure class="bio-media">
+                    <img src="assets/eu2.jpeg" alt="Lucas Bellen" class="bio-image" loading="lazy" decoding="async">
+                </figure>
 
-        <div class="header-obra">
-            <h2 class="fonte-medieval" style="font-size: 5rem; margin: 0;">Provação</h2>
-            <p class="titulo-obra-serif" style="font-size: 1.6rem; margin-top: 5px;">(Crônicas de Cámenem - Primeiro Volume)</p>
-        </div>
-
-        <div class="corpo-template">
-            <img src="assets/provacaop.png" alt="Provação" class="imagem-template-obra">
-        </div>
-        
-        <div class="caixa-interacao">
-            <button class="btn-largo" onclick="toggleConteudo('sin-prov')">
-                Ler Sinopse <span class="mais">+</span>
-            </button>
-            <div id="sin-prov" class="conteudo-extra">
-                <p class="texto-serifado">Em um universo onde reinos medievais e cavaleiros ainda existem, lendas sobre atos de heroísmo e bravura em combate propiciam ascensão e glória para aqueles suficientemente ousados para persegui-las. 
-Um jovem com um passado sombrio e repleto de ânsias sobre o futuro, Rafael, leva a vida na capital do reino de Cámenem com entusiasmo, sob a tutela de um experiente ferreiro, que o instrui a respeito da própria profissão. Tendo sonhado com a grandeza desde pequeno e disposto a enfrentar condições desfavoráveis e superar traumas do passado, ele decide participar do torneio de justas da Ordem dos Paladinos, uma competição que seleciona e promove o melhor entre os duelistas para ingressar em suas fileiras. 
-Ao mesmo tempo, Martim, outro jovem de mesma idade, é confrontado pela mãe após se recusar a passar os restos de seus dias em uma instituição religiosa, para seguir os passos do pai, a quem admira e toma por exemplo.
-Ambos são envolvidos em uma crise política que tem início após o rei de Cámenem, Garibaldi, sofrer um atentado à luz do dia. A suspeita do ataque recai sobre o império de Santai, ao norte, que há mais de cem anos encontra-se em paz com seus vizinhos.
-Conectados, precisarão resolver os conflitos que os unem, bem como empenhar esforços a fim de evitar que uma guerra sem precedentes seja travada entre Cámenem e Santai, gigante no continente, cujo poderio desperta o temor de todas as nações ao seu redor.</p>
-            </div>
-
-            <button class="btn-largo" onclick="toggleConteudo('deg-prov')">
-                Ler Degustação <span class="mais">+</span>
-            </button>
-            <div id="deg-prov" class="conteudo-extra">
-<iframe 
-    type="text/html" 
-    width="100%" 
-    height="550px" 
-    frameborder="0" 
-    src="https://read.amazon.com/kp/embed?asin=B09SKS9TZ2&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample" 
-    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-    style="border:none; border-radius: 8px;">
-</iframe>
-            </div>
-
-            <div class="caixa-compra-vertical">
-                <a href="https://loja.uiclap.com/titulo/ua15767/" target="_blank" class="btn-dourado-largo">Compre o livro físico</a>
-                <a href="https://www.amazon.com.br/Prova%C3%A7%C3%A3o-Lucas-Bellen-ebook/dp/B09SKS9TZ2" target="_blank" class="btn-dourado-largo">Leia no Kindle</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section id="livros" class="quadrante livro-secao" style="--img-fundo: url('assets/elevacaodesfoque.png');">
-    <div class="conteudo-livro-v3">
-
-        <div class="header-obra">
-            <h2 class="fonte-medieval" style="font-size: 5rem; margin: 0;">Elevação</h2>
-            <p class="titulo-obra-serif" style="font-size: 1.6rem; margin-top: 5px;">(Crônicas de Cámenem - Segundo Volume)</p>
-        </div>
-
-        <div class="corpo-template">
-            <img src="assets/elevacaop.png" alt="Elevação" class="imagem-template-obra">
-        </div>
-        
-        <div class="caixa-interacao">
-            <button class="btn-largo" onclick="toggleConteudo('sin-elev')">
-                Ler Sinopse <span class="mais">+</span>
-            </button>
-            <div id="sin-elev" class="conteudo-extra">
-                <p class="texto-serifado">Após os eventos de Provação, os herois deixam o palco da derrota imersos em diferentes complicações. A ameaça de guerra contra o império de Santai é cada vez mais concreta, enquanto a passagem do tempo é silenciosa.
-Aderindo ao juramento da ordem dos paladinos, Martim e Rafael contemplam a busca por um propósito, cada qual disposto a provar seu valor, enquanto questionam-se sobre o que enxergam em seus pares e superiores, confrontando as adversidades no caminho. 
-Com base na perspicácia e clareza das suas decisões, Garibaldi governa Cámenem ao mesmo tempo em que reúne esforços para o eventual chamado à guerra, atento para tensões diplomáticas e o jogo de poder na disputa entre os príncipes de Santai pela ascensão ao trono do império.
-Imerso na crise, o continente acolhe visitantes das nações ultramarinas, que ao se lançarem em grandes navegações apresentam o espantoso progresso tecnológico do outro lado do oceano, com o potencial de reverter a superioridade militar de Santai.
-
-O futuro é incerto diante do revés político e da campanha militar que surge como resposta às ameaças do Norte. Inimigos espreitam à sombra de uma conspiração alimentada por poder e ódio no segundo volume de Crônicas de Cámenem.</p>
-            </div>
-
-            <button class="btn-largo" onclick="toggleConteudo('deg-elev')">
-                Ler Degustação <span class="mais">+</span>
-            </button>
-            <div id="deg-elev" class="conteudo-extra">
-<iframe 
-    type="text/html" 
-    width="100%" 
-    height="550px" 
-    frameborder="0" 
-    src="https://read.amazon.com/kp/embed?asin=B0BK2T8XB6&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample" 
-    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-    style="border:none; border-radius: 8px;">
-</iframe>
-            </div>
-
-            <div class="caixa-compra-vertical">
-                <a href="https://loja.uiclap.com/titulo/ua23829/" target="_blank" class="btn-dourado-largo">Compre o livro físico</a>
-                <a href="https://www.amazon.com.br/gp/product/B0BK2T8XB6" target="_blank" class="btn-dourado-largo">Leia no Kindle</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<section id="livros" class="quadrante livro-secao" style="--img-fundo: url('assets/redencaodesfoque.png');">
-    <div class="conteudo-livro-v3">
-
-        <div class="header-obra">
-            <h2 class="fonte-medieval" style="font-size: 5rem; margin: 0;">Redenção</h2>
-            <p class="titulo-obra-serif" style="font-size: 1.6rem; margin-top: 5px;">(Crônicas de Cámenem - Terceiro Volume)</p>
-        </div>
-
-        <div class="corpo-template">
-            <img src="assets/redencaop.png" alt="Redenção" class="imagem-template-obra">
-        </div>
-        
-        <div class="caixa-interacao">
-            <button class="btn-largo" onclick="toggleConteudo('sin-reden')">
-                Ler Sinopse <span class="mais">+</span>
-            </button>
-            <div id="sin-reden" class="conteudo-extra">
-                <p class="texto-serifado">Na sequência dos acontecimentos do segundo volume de Crônicas de Cámenem, revelações desencadeiam o inevitável conflito entre o reino e o império de Santai, que
-determinará o destino do continente, e delegam aos paladinos o nobre dever de salvaguardar o reino. 
-Quando amor e guerra são colocados em jogo, Rafael, Martim desafiam o destino, persistindo na busca de seus ideais. Diante de um impasse, Garibaldi clama à voz do povo, residindo na coragem e na mobilização dos súditos de Cámenem. Em uma campanha de guerra sem precedentes, extremos se confundem com situações comuns, dificuldades se tornam uma constante e atos de bravura viram lendas, enraizadas na esperança de reaver a paz. 
-</p>
-            </div>
-
-            <button class="btn-largo" onclick="toggleConteudo('deg-reden')">
-                Ler Degustação <span class="mais">+</span>
-            </button>
-            <div id="deg-reden" class="conteudo-extra">
-<iframe 
-    type="text/html" 
-    width="100%" 
-    height="550px" 
-    frameborder="0" 
-    src="https://read.amazon.com/kp/embed?asin=B0BXZ26ZFR&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample" 
-    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-    style="border:none; border-radius: 8px;">
-</iframe>
-            </div>
-
-            <div class="caixa-compra-vertical">
-                <a href="https://loja.uiclap.com/titulo/ua29743/" target="_blank" class="btn-dourado-largo">Compre o livro físico</a>
-                <a href="https://www.amazon.com.br/gp/product/B0BXZ26ZFR" target="_blank" class="btn-dourado-largo">Leia no Kindle</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section id="livros" class="quadrante livro-secao" style="--img-fundo: url('assets/missoesdesfoque.png');">
-    <div class="conteudo-livro-v3">
-
-    <div class="header-obra">
-        <h2 class="titulo-missoes">Missoes do Aluno 13</h2>
-        <p class="titulo-obra-serif" style="font-size: 1.6rem; margin-top: 5px;">(Volume Único)</p>
-
-        <div class="corpo-template">
-            <img src="assets/missoes13p.png" alt="Missões do Aluno 13" class="imagem-template-obra">
-        </div>
-        
-        <div class="caixa-interacao">
-            <button class="btn-largo" onclick="toggleConteudo('sin-missoes')">
-                Ler Sinopse <span class="mais">+</span>
-            </button>
-            <div id="sin-missoes" class="conteudo-extra">
-                <p class="texto-serifado">Missões do Aluno 13 é uma autobiografia que narra o decorrer do ano de instrução de um aluno do Núcleo de Preparação de Oficiais da Reserva (NPOR), durante o serviço militar obrigatório. A obra apresenta os desafios e as experiências que regem a formação do aspirante a oficial da reserva, bem como os triunfos e os momentos gloriosos, eternizados na memória daqueles que vivenciaram a caserna.</p>
-            </div>
-
-            <button class="btn-largo" onclick="toggleConteudo('deg-missoes')">
-                Ler Degustação <span class="mais">+</span>
-            </button>
-            <div id="deg-missoes" class="conteudo-extra">
-<iframe 
-    type="text/html" 
-    width="100%" 
-    height="550px" 
-    frameborder="0" 
-    src="https://read.amazon.com/kp/embed?asin=B0CPH5MMR7&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample" 
-    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-    style="border:none; border-radius: 8px;">
-</iframe>
-            </div>
-
-            <div class="caixa-compra-vertical">
-                <a href="https://loja.uiclap.com/titulo/ua36526/" target="_blank" class="btn-dourado-largo">Compre o livro físico</a>
-                <a href="https://www.amazon.com.br/Miss%C3%B5es-do-Aluno-Lucas-Bellen-ebook/dp/B0CPH5MMR7" target="_blank" class="btn-dourado-largo">Leia no Kindle</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="lancamento" class="quadrante lancamento-secao">
-    <div class="container-lancamento">
-        
-        <div class="topo-lancamento">
-            <div class="chamada-lancamento">
-                <span>Conheça meu novo livro</span>
-            </div>
-            <div class="data-lancamento">
-                <h2>Lançamento</h2>
-                <span class="data">24/08/25</span>
-            </div>
-        </div>
-
-        
-        <div class="corpo-lancamento">
-            <img src="assets/impetodecampeao.jpg" alt="Ímpeto de Campeão" class="capa-lancamento">
-        
-            <div class="texto-movimento">
-                <span class="frase-linha-1">A espera acabou!</span>
-                <span class="frase-linha-2">(Corrida. Competição. Atletismo.)</span>
-                <span class="frase-linha-3">Tudo isso e muito mais!</span>
-            </div>
-        </div>
-        <div class="caixa-interacao centralizada">
-            <button class="btn-largo" onclick="toggleConteudo('sin-novo')">
-                Ler Sinopse <span class="mais">+</span>
-            </button>
-            <div id="sin-novo" class="conteudo-extra">
-                <p class="texto-serifado">Interior do Rio Grande do Sul, 2061. A tecnologia no futuro é usada para fomentar avanços científicos ao mesmo tempo em que alimenta a vaidade de uma sociedade permanentemente presa ao mundo cibernético. Prestígio e poder são determinantes no valor de qualquer pessoa.
-
-Lidando com cobranças e imposições pessoais, quatro velocistas têm a equipe desmantelada quando um dos colegas sofre um grave acidente. Disposto a se reinventar, um dos corredores, Bruno Apolinário, persiste no sonho de competir em alto nível e participar das extintas olimpíadas, depois de um escândalo global que culminou em um golpe irreparável à honra das nações.
-
-Distante do palco mundial e dos holofotes da grande mídia, o atleta percorre pistas dotadas de sensores tecnológicos, em busca de evolução e visibilidade, enquanto questiona seus ideais e o mundo disruptivo ao redor.</p>
-            </div>
-            <button class="btn-largo" onclick="toggleConteudo('trailer-lanc')">
-                Confira o Trailer <span class="mais">+</span>
-            </button>
-
-            <div id="trailer-lanc" class="conteudo-extra">
-                <iframe 
-                    src="https://www.instagram.com/p/DNokFEpygO2/embed/" 
-                    width="100%" 
-                    height="1200px" 
-                    frameborder="0" 
-                    scrolling="no" 
-                    allowtransparency="true" 
-                    style="border:none; border-radius: 8px; background: white;">
-                </iframe>
-
-
-            <div class="cupom-container">
-                    <p class="texto-cupom-chamada">Gostou do trailer? Use o cupom abaixo na UICLAP:</p>
-                    <div class="cupom-ticket">
-                        <span class="codigo-cupom">UAC300338ATCRRGP5A</span>
-                        <span class="detalhe-cupom">20% OFF</span>
+                <div class="bio-copy">
+                    <h2>Sobre mim</h2>
+                    <div class="text-stack">
+                        <p>
+                            Comecei a ler desde pequeno, aos cinco anos de idade, com as revistas em quadrinhos que ganhava do Tio Patinhas e da Turma da Mônica.
+                        </p>
+                        <p>
+                            Minha missão de vida é impactar a vida das pessoas com histórias, misturando o simples ao extraordinário.
+                        </p>
+                        <p>
+                            Muito além de páginas, meus livros são o legado que quero deixar para o futuro. Acredito no poder de cada um de nós em fazer a sua parte por um mundo melhor.
+                        </p>
                     </div>
-                    <a href="https://s.uiclap.com/XsN" target="_blank" class="link-copiar">Clique aqui para aplicar o desconto</a>
-                </div>
-                
-            </div>
-            <button class="btn-largo" onclick="toggleConteudo('deg-novo')">
-                Ler Degustação <span class="mais">+</span>
-            </button>
-            <div id="deg-novo" class="conteudo-extra">
-<iframe 
-    type="text/html" 
-    width="100%" 
-    height="550px" 
-    frameborder="0" 
-    src="https://read.amazon.com/kp/embed?asin=B0FNLZHMD6&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample" 
-    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-    style="border:none; border-radius: 8px;">
-</iframe>
-            </div>
-
-            <div class="caixa-compra-vertical">
-                <a href="https://loja.uiclap.com/titulo/ua87246" target="_blank" class="btn-dourado-largo">Compre o livro físico</a>
-                <a href="https://www.amazon.com.br/%C3%8Dmpeto-Campe%C3%A3o-Lucas-Bellen-ebook/dp/B0FNLZHMD6" target="_blank" class="btn-dourado-largo">Leia no Kindle</a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-
-<section id="galeria" class="quadrante detalhes" style="overflow: hidden;">
-    <div class="container-galeria">
-        
-        <h2 class="titulo-feedbacks-clean">Galeria</h2>
-
-        <div class="galeria-fita-wrapper">
-            
-            <div class="fita-marquee">
-                <div class="fita-track">
-                    <img src="assets/f1.png" alt="Feedback">
-                    <img src="assets/f6.png" alt="Feedback">
-                    <img src="assets/f2.png" alt="Feedback">
-                    <img src="assets/f7.png" alt="Feedback">
-                    <img src="assets/f10.png" alt="Feedback">
-                    <img src="assets/f1.png" alt="Feedback">
-                    <img src="assets/f6.png" alt="Feedback">
-                    <img src="assets/f2.png" alt="Feedback">
-                    <img src="assets/f7.png" alt="Feedback">
-                    <img src="assets/f10.png" alt="Feedback">
                 </div>
             </div>
+        </section>
 
-            <div class="fita-marquee fita-reversa">
-                <div class="fita-track">
-                    <img src="assets/f3.png" alt="Feedback">
-                    <img src="assets/f9.png" alt="Feedback">
-                    <img src="assets/f5.png" alt="Feedback">
-                    <img src="assets/f4.png" alt="Feedback">
-                    <img src="assets/f8.png" alt="Feedback">
-                    <img src="assets/f3.png" alt="Feedback">
-                    <img src="assets/f9.png" alt="Feedback">
-                    <img src="assets/f5.png" alt="Feedback">
-                    <img src="assets/f4.png" alt="Feedback">
-                    <img src="assets/f8.png" alt="Feedback">
+        <section id="livros" class="section books">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <p class="section-kicker">Bibliografia</p>
+                    <h2>Livros</h2>
+                </div>
+
+                <div class="books-grid">
+                    <article class="book-card book-card--prova">
+                        <div class="book-card__header">
+                            <h3 class="book-title">Provação</h3>
+                            <p class="book-subtitle">(Crônicas de Cámemem - Primeiro Volume)</p>
+                        </div>
+
+                        <img src="assets/provacaop.png" alt="Capa de Provação" class="book-cover" loading="lazy" decoding="async">
+
+                        <details class="accordion">
+                            <summary>Ler sinopse</summary>
+                            <div class="accordion__content">
+                                <p>
+                                    Em um universo onde reinos medievais e cavaleiros ainda existem, lendas sobre atos de heroísmo e bravura em combate propiciam ascensão e glória para aqueles suficientemente ousados para persegui-las.
+                                    Um jovem com um passado sombrio e repleto de ânsias sobre o futuro, Rafael, leva a vida na capital do reino de Cámemem com entusiasmo, sob a tutela de um experiente ferreiro, que o instrui a respeito da própria profissão.
+                                    Tendo sonhado com a grandeza desde pequeno e disposto a enfrentar condições desfavoráveis e superar traumas do passado, ele decide participar do torneio de justas da Ordem dos Paladinos, uma competição que seleciona e promove o melhor entre os duelistas para ingressar em suas fileiras.
+                                    Ao mesmo tempo, Martim, outro jovem de mesma idade, é confrontado pela mãe após se recusar a passar os restos de seus dias em uma instituição religiosa, para seguir os passos do pai, a quem admira e toma por exemplo.
+                                    Ambos são envolvidos em uma crise política que tem início após o rei de Cámemem, Garibaldi, sofrer um atentado à luz do dia. A suspeita do ataque recai sobre o império de Santai, ao norte, que há mais de cem anos encontra-se em paz com seus vizinhos.
+                                    Conectados, precisarão resolver os conflitos que os unem, bem como empenhar esforços a fim de evitar que uma guerra sem precedentes seja travada entre Cámemem e Santai, gigante no continente, cujo poderio desperta o temor de todas as nações ao seu redor.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="accordion">
+                            <summary>Ler degustação</summary>
+                            <div class="accordion__content">
+                                <iframe
+                                    class="embed-frame"
+                                    title="Amostra de Provação"
+                                    src="https://read.amazon.com/kp/embed?asin=B09SKS9TZ2&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample"
+                                    loading="lazy"
+                                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+                            </div>
+                        </details>
+
+                        <div class="book-actions">
+                            <a href="https://loja.uiclap.com/titulo/ua15767/" target="_blank" rel="noopener noreferrer" class="cta-button">Compre o livro físico</a>
+                            <a href="https://www.amazon.com.br/Prova%C3%A7%C3%A3o-Lucas-Bellen-ebook/dp/B09SKS9TZ2" target="_blank" rel="noopener noreferrer" class="cta-button">Leia no Kindle</a>
+                        </div>
+                    </article>
+
+                    <article class="book-card book-card--elevacao">
+                        <div class="book-card__header">
+                            <h3 class="book-title">Elevação</h3>
+                            <p class="book-subtitle">(Crônicas de Cámemem - Segundo Volume)</p>
+                        </div>
+
+                        <img src="assets/elevacaop.png" alt="Capa de Elevação" class="book-cover" loading="lazy" decoding="async">
+
+                        <details class="accordion">
+                            <summary>Ler sinopse</summary>
+                            <div class="accordion__content">
+                                <p>
+                                    Após os eventos de Provação, os heróis deixam o palco da derrota imersos em diferentes complicações. A ameaça de guerra contra o império de Santai é cada vez mais concreta, enquanto a passagem do tempo é silenciosa.
+                                    Aderindo ao juramento da ordem dos paladinos, Martim e Rafael contemplam a busca por um propósito, cada qual disposto a provar seu valor, enquanto questionam-se sobre o que enxergam em seus pares e superiores, confrontando as adversidades no caminho.
+                                    Com base na perspicácia e clareza das suas decisões, Garibaldi governa Cámemem ao mesmo tempo em que reúne esforços para o eventual chamado à guerra, atento para tensões diplomáticas e o jogo de poder na disputa entre os príncipes de Santai pela ascensão ao trono do império.
+                                    Imerso na crise, o continente acolhe visitantes das nações ultramarinas, que ao se lançarem em grandes navegações apresentam o espantoso progresso tecnológico do outro lado do oceano, com o potencial de reverter a superioridade militar de Santai.
+                                    O futuro é incerto diante do revés político e da campanha militar que surge como resposta às ameaças do Norte. Inimigos espreitam à sombra de uma conspiração alimentada por poder e ódio no segundo volume de Crônicas de Cámemem.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="accordion">
+                            <summary>Ler degustação</summary>
+                            <div class="accordion__content">
+                                <iframe
+                                    class="embed-frame"
+                                    title="Amostra de Elevação"
+                                    src="https://read.amazon.com/kp/embed?asin=B0BK2T8XB6&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample"
+                                    loading="lazy"
+                                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+                            </div>
+                        </details>
+
+                        <div class="book-actions">
+                            <a href="https://loja.uiclap.com/titulo/ua23829/" target="_blank" rel="noopener noreferrer" class="cta-button">Compre o livro físico</a>
+                            <a href="https://www.amazon.com.br/gp/product/B0BK2T8XB6" target="_blank" rel="noopener noreferrer" class="cta-button">Leia no Kindle</a>
+                        </div>
+                    </article>
+
+                    <article class="book-card book-card--redencao">
+                        <div class="book-card__header">
+                            <h3 class="book-title">Redenção</h3>
+                            <p class="book-subtitle">(Crônicas de Cámemem - Terceiro Volume)</p>
+                        </div>
+
+                        <img src="assets/redencaop.png" alt="Capa de Redenção" class="book-cover" loading="lazy" decoding="async">
+
+                        <details class="accordion">
+                            <summary>Ler sinopse</summary>
+                            <div class="accordion__content">
+                                <p>
+                                    Na sequência dos acontecimentos do segundo volume de Crônicas de Cámemem, revelações desencadeiam o inevitável conflito entre o reino e o império de Santai, que determinará o destino do continente, e delegam aos paladinos o nobre dever de salvaguardar o reino.
+                                    Quando amor e guerra são colocados em jogo, Rafael e Martim desafiam o destino, persistindo na busca de seus ideais. Diante de um impasse, Garibaldi clama à voz do povo, residindo na coragem e na mobilização dos súditos de Cámemem.
+                                    Em uma campanha de guerra sem precedentes, extremos se confundem com situações comuns, dificuldades se tornam uma constante e atos de bravura viram lendas, enraizadas na esperança de reaver a paz.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="accordion">
+                            <summary>Ler degustação</summary>
+                            <div class="accordion__content">
+                                <iframe
+                                    class="embed-frame"
+                                    title="Amostra de Redenção"
+                                    src="https://read.amazon.com/kp/embed?asin=B0BXZ26ZFR&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample"
+                                    loading="lazy"
+                                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+                            </div>
+                        </details>
+
+                        <div class="book-actions">
+                            <a href="https://loja.uiclap.com/titulo/ua29743/" target="_blank" rel="noopener noreferrer" class="cta-button">Compre o livro físico</a>
+                            <a href="https://www.amazon.com.br/gp/product/B0BXZ26ZFR" target="_blank" rel="noopener noreferrer" class="cta-button">Leia no Kindle</a>
+                        </div>
+                    </article>
+
+                    <article class="book-card book-card--missoes">
+                        <div class="book-card__header">
+                            <h3 class="book-title book-title--special">Missões do Aluno 13</h3>
+                            <p class="book-subtitle">(Volume único)</p>
+                        </div>
+
+                        <img src="assets/missoes13p.png" alt="Capa de Missões do Aluno 13" class="book-cover" loading="lazy" decoding="async">
+
+                        <details class="accordion">
+                            <summary>Ler sinopse</summary>
+                            <div class="accordion__content">
+                                <p>
+                                    Missões do Aluno 13 é uma autobiografia que narra o decorrer do ano de instrução de um aluno do Núcleo de Preparação de Oficiais da Reserva (NPOR), durante o serviço militar obrigatório.
+                                    A obra apresenta os desafios e as experiências que regem a formação do aspirante a oficial da reserva, bem como os triunfos e os momentos gloriosos, eternizados na memória daqueles que vivenciaram a caserna.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="accordion">
+                            <summary>Ler degustação</summary>
+                            <div class="accordion__content">
+                                <iframe
+                                    class="embed-frame"
+                                    title="Amostra de Missões do Aluno 13"
+                                    src="https://read.amazon.com/kp/embed?asin=B0CPH5MMR7&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample"
+                                    loading="lazy"
+                                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+                            </div>
+                        </details>
+
+                        <div class="book-actions">
+                            <a href="https://loja.uiclap.com/titulo/ua36526/" target="_blank" rel="noopener noreferrer" class="cta-button">Compre o livro físico</a>
+                            <a href="https://www.amazon.com.br/Miss%C3%B5es-do-Aluno-Lucas-Bellen-ebook/dp/B0CPH5MMR7" target="_blank" rel="noopener noreferrer" class="cta-button">Leia no Kindle</a>
+                        </div>
+                    </article>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </div>
-</section>
+        <section id="lancamento" class="section launch">
+            <div class="section-inner">
+                <article class="launch-card">
+                    <div class="launch-top">
+                        <p class="section-kicker">Conheça meu novo livro</p>
+                        <div class="launch-meta">
+                            <h2>Lançamento</h2>
+                            <span class="launch-date">24/08/2025</span>
+                        </div>
+                    </div>
 
+                    <div class="launch-body">
+                        <img src="assets/impetodecampeao.jpg" alt="Ímpeto de Campeão" class="launch-cover" loading="lazy" decoding="async">
 
+                        <div class="launch-copy">
+                            <p class="launch-line">A espera acabou!</p>
+                            <p class="launch-line launch-line--secondary">(Corrida. Competição. Atletismo.)</p>
+                            <p class="launch-line">Tudo isso e muito mais!</p>
+                        </div>
+                    </div>
 
+                    <details class="accordion">
+                        <summary>Ler sinopse</summary>
+                        <div class="accordion__content">
+                            <p>
+                                Interior do Rio Grande do Sul, 2061. A tecnologia no futuro é usada para fomentar avanços científicos ao mesmo tempo em que alimenta a vaidade de uma sociedade permanentemente presa ao mundo cibernético. Prestígio e poder são determinantes no valor de qualquer pessoa.
+                                Lidando com cobranças e imposições pessoais, quatro velocistas têm a equipe desmantelada quando um dos colegas sofre um grave acidente. Disposto a se reinventar, um dos corredores, Bruno Apolinário, persiste no sonho de competir em alto nível e participar das extintas olimpíadas, depois de um escândalo global que culminou em um golpe irreparável à honra das nações.
+                                Distante do palco mundial e dos holofotes da grande mídia, o atleta percorre pistas dotadas de sensores tecnológicos, em busca de evolução e visibilidade, enquanto questiona seus ideais e o mundo disruptivo ao redor.
+                            </p>
+                        </div>
+                    </details>
 
+                    <details class="accordion">
+                        <summary>Confira o trailer e o cupom</summary>
+                        <div class="accordion__content launch-extra">
+                            <iframe
+                                class="embed-frame embed-frame--tall"
+                                title="Trailer de Ímpeto de Campeão"
+                                src="https://www.instagram.com/p/DNokFEpygO2/embed/"
+                                loading="lazy"
+                                scrolling="no"
+                                allowtransparency="true"></iframe>
 
+                            <div class="coupon-box">
+                                <p class="coupon-copy">Gostou do trailer? Use o cupom abaixo na UICLAP:</p>
+                                <div class="coupon-ticket">
+                                    <span class="coupon-code">UAC300338ATCRRGP5A</span>
+                                    <span class="coupon-tag">20% OFF</span>
+                                </div>
+                                <a href="https://s.uiclap.com/XsN" target="_blank" rel="noopener noreferrer" class="coupon-link">Clique aqui para aplicar o desconto</a>
+                            </div>
+                        </div>
+                    </details>
 
+                    <details class="accordion">
+                        <summary>Ler degustação</summary>
+                        <div class="accordion__content">
+                            <iframe
+                                class="embed-frame"
+                                title="Amostra de Ímpeto de Campeão"
+                                src="https://read.amazon.com/kp/embed?asin=B0FNLZHMD6&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_sample"
+                                loading="lazy"
+                                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+                        </div>
+                    </details>
 
+                    <div class="book-actions">
+                        <a href="https://loja.uiclap.com/titulo/ua87246" target="_blank" rel="noopener noreferrer" class="cta-button">Compre o livro físico</a>
+                        <a href="https://www.amazon.com.br/%C3%8Dmpeto-Campe%C3%A3o-Lucas-Bellen-ebook/dp/B0FNLZHMD6" target="_blank" rel="noopener noreferrer" class="cta-button">Leia no Kindle</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
+        <section id="galeria" class="section gallery">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <p class="section-kicker">Galeria</p>
+                    <h2>Feedbacks</h2>
+                </div>
 
+                <div class="gallery-wrapper" aria-label="Galeria de imagens de feedback">
+                    <div class="marquee">
+                        <div class="marquee-track">
+                            <img src="assets/f1.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f6.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f2.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f7.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f10.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f1.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f6.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f2.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f7.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f10.png" alt="Feedback" loading="lazy" decoding="async">
+                        </div>
+                    </div>
 
-<section id="contato" class="quadrante contato-secao">
-    <div class="container-contato">
-        
-        <div class="contato-esquerda">
-            <span class="chamada-contato">Quer falar comigo?</span>
-            <h2 class="titulo-contato-gigante">Contato</h2>
-        </div>
-
-        <div class="contato-direita">
-
-<div class="rede-social-item">
-    <span class="icone-rede">✉️</span>
-    <div class="info-rede">
-        <span class="label-rede">E-mail</span>
-        <a href="mailto:contatolucasbellen@gmail.com" class="user-rede email-ajuste">contatolucasbellen@gmail.com</a>
-    </div>
-</div>
-            <div class="rede-social-item">
-                <span class="icone-rede">📸</span> 
-                <div class="info-rede">
-                    <span class="label-rede">Instagram</span>
-                    <a href="https://instagram.com/lucasbellen" target="_blank" class="user-rede">@bellen_lucas</a>
+                    <div class="marquee marquee--reverse">
+                        <div class="marquee-track">
+                            <img src="assets/f3.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f9.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f5.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f4.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f8.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f3.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f9.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f5.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f4.png" alt="Feedback" loading="lazy" decoding="async">
+                            <img src="assets/f8.png" alt="Feedback" loading="lazy" decoding="async">
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="rede-social-item">
-                <span class="icone-rede">🎵</span>
-                <div class="info-rede">
-                    <span class="label-rede">TikTok</span>
-                    <a href="https://tiktok.com/@lucasbellen" target="_blank" class="user-rede">@bellen_lucas</a>
+        <section id="contato" class="section contact">
+            <div class="section-inner contact-grid">
+                <div class="contact-copy">
+                    <p class="section-kicker">Contato</p>
+                    <h2 class="contact-title">Quer falar comigo?</h2>
+                </div>
+
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">✉️</span>
+                        <div class="contact-text">
+                            <span class="contact-label">E-mail</span>
+                            <a href="mailto:contatolucasbellen@gmail.com" class="contact-link">contatolucasbellen@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">📷</span>
+                        <div class="contact-text">
+                            <span class="contact-label">Instagram</span>
+                            <a href="https://instagram.com/lucasbellen" target="_blank" rel="noopener noreferrer" class="contact-link">@bellen_lucas</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">🎵</span>
+                        <div class="contact-text">
+                            <span class="contact-label">TikTok</span>
+                            <a href="https://tiktok.com/@lucasbellen" target="_blank" rel="noopener noreferrer" class="contact-link">@bellen_lucas</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+    </main>
 
-    </div>
-</section>
-
-
-</section> <footer class="rodape">
-    <p>Copyright © 2026, Lucas Bellen | Todos os direitos estão reservados ao autor.</p>
-</footer>
-
-
-
-
-
-<script>
-function toggleConteudo(id) {
-    const elemento = document.getElementById(id);
-    const estaVisivel = elemento.style.display === 'block';
-
-    // Fecha outros conteúdos no mesmo bloco
-    const pai = elemento.closest('.caixa-interacao');
-    pai.querySelectorAll('.conteudo-extra').forEach(el => {
-        el.style.display = 'none';
-        el.style.opacity = '0';
-    });
-
-    if (!estaVisivel) {
-        elemento.style.display = 'block';
-        // Pequeno delay para a transição de opacidade funcionar
-        setTimeout(() => {
-            elemento.style.opacity = '1';
-        }, 10);
-    }
-}
-</script>
-
-
-
-
-
+    <footer class="site-footer">
+        <p>Copyright © 2026, Lucas Bellen. Todos os direitos reservados ao autor.</p>
+    </footer>
 </body>
-
 </html>
-
-
-
-
-
-
